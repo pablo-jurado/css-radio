@@ -260,9 +260,10 @@ class Radio {
 
   _buildHTML () {
     return htmlStation() +
+           htmlTuner() +
+           htmlSpeaker() +
            htmlCurrentVolume() +
            htmlVolumeControl() +
-           htmlTuner() +
            htmlFavorites()
 
     function htmlStation() {
@@ -279,19 +280,25 @@ class Radio {
               </div>`
     }
 
+    function htmlSpeaker() {
+      return `<div class="speaker">
+                <div></div>
+              </div>`
+    }
+
     function htmlVolumeControl() {
       return `<div class="chunk">
                   <label>Volume:</label>
-                  <button class="volume-up-btn">Up</button>
-                  <button class="volume-down-btn">Down</button>
+                  <button class="volume-up-btn">&#x25B2;</button>
+                  <button class="volume-down-btn">&#x25BC;</button>
               </div>`
     }
 
     function htmlTuner() {
       return `<div class="chunk">
                   <label>Tune:</label>
-                  <button class="tune-up-btn">Up</button>
-                  <button class="tune-down-btn">Down</button>
+                  <button class="tune-up-btn">&#x25B2;</button>
+                  <button class="tune-down-btn">&#x25BC;</button>
               </div>`
     }
 
